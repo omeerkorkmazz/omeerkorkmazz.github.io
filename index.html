@@ -1,1 +1,284 @@
-Welcome to Omer Korkmaz's page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ÖMER KORKMAZ | Senior Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Plus Jakarta Sans: Modern, teknolojik ve premium bir font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-dark: #030712;      
+      --card-bg: #111827;      
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-color: #1f2937;
+      /* Premium gradient renkleri */
+      --grad-1: #38bdf8;       /* Açık mavi */
+      --grad-2: #818cf8;       /* İndigo/Mor */
+      --grad-3: #c084fc;       /* Pembe/Mor */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+      background-image: radial-gradient(circle at top right, rgba(56, 189, 248, 0.06), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(192, 132, 252, 0.06), transparent 40%);
+    }
+
+    .card {
+      background: var(--card-bg);
+      max-width: 560px; /* Kart içeriğe nefes aldırmak için biraz daha genişletildi */
+      width: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.06);
+      position: relative;
+    }
+
+    /* Animasyonlu Gradient Header */
+    .card-header {
+      height: 160px;
+      background: linear-gradient(-45deg, var(--grad-1), var(--grad-2), var(--grad-3), var(--grad-1));
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card-body {
+      padding: 0 3rem 3.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Fotoğraf daha da büyütüldü */
+    .avatar-wrapper {
+      margin-top: -85px; /* Fotoğrafın yarısı yukarıda (170/2) */
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid var(--card-bg);
+      background-color: var(--card-bg);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      color: #ffffff;
+    }
+
+    /* Unvan - Yüksek Etkili Gradient */
+    .role {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, var(--grad-1), var(--grad-3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .bio strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .tech-stack {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--grad-1);
+      letter-spacing: 0.05em;
+    }
+
+    /* Link Butonları Düzeni */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .link-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--grad-2);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -10px var(--grad-2);
+      color: #fff;
+    }
+
+    .link-btn i {
+      font-size: 1.1rem;
+    }
+
+    /* Ana Aksiyon (CTA) E-posta Butonu */
+    .email-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--grad-2), var(--grad-3));
+      border: none;
+      border-radius: 12px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px -5px rgba(129, 140, 248, 0.4);
+    }
+
+    .email-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -5px rgba(129, 140, 248, 0.6);
+      filter: brightness(1.1);
+    }
+
+    /* --- Mobil Uyumluluk (Responsive Design) --- */
+    @media (max-width: 560px) {
+      body {
+        padding: 1rem;
+      }
+      .card-body {
+        padding: 0 1.5rem 2.5rem;
+      }
+      .card-header {
+        height: 130px;
+      }
+      .avatar-wrapper {
+        margin-top: -75px;
+      }
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-width: 6px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .role {
+        font-size: 0.85rem;
+      }
+      .bio {
+        font-size: 0.95rem;
+      }
+      .social-links {
+        gap: 0.5rem;
+      }
+      .link-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        justify-content: center;
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <div class="avatar-wrapper">
+        <img src="images/me.jpg" alt="ÖMER KORKMAZ" class="profile-photo">
+      </div>
+      
+      <h1>ÖMER KORKMAZ</h1>
+      <div class="role">MSc. Tech Driver & Senior SWE @ Delivery Hero</div>
+      
+      <p class="bio">
+        M.Sc. in Computer Science bridging cross-functional leadership with deep technical execution.  I scale high-stakes distributed systems and engineer agentic AI frameworks.
+      </p>
+    
+      <div class="tech-stack">
+        .NET &bull; Go &bull; Python &bull; LangGraph
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/omeerkorkmazz" target="_blank" class="link-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/omerkorkmazz" target="_blank" class="link-btn">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://okorkmaz.medium.com" target="_blank" class="link-btn">
+          <i class="fab fa-medium"></i> Medium
+        </a>
+        <a href="https://speakerdeck.com/omerkorkmaz" target="_blank" class="link-btn">
+          <i class="fas fa-person-chalkboard"></i> Speaker Deck
+        </a>
+        <a href="https://orcid.org/0000-0002-9807-0394" target="_blank" class="link-btn">
+          <i class="fas fa-microscope"></i> ORCID
+        </a>
+      </div>
+
+      <a href="mailto:omer.korkmaz.95@windowslive.com" class="email-btn">
+        <i class="fas fa-envelope"></i> omer.korkmaz.95@windowslive.com
+      </a>
+      
+    </div>
+  </div>
+
+</body>
+</html>
